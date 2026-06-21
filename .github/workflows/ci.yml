@@ -1,7 +1,11 @@
 # run python tests on pull request using github actions
 name: Python CI 
-#trigger basedon push on main branch and pull request
-on: [pull_request]
+#trigger based on push on main branch and pull request
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   build:
     runs-on: ubuntu-latest
